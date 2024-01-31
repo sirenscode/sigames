@@ -1,0 +1,262 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  color: #FFF;
+  background-color: #1A1B1E;
+  font-family: 'bahnschrift';
+}
+@font-face {
+  font-family: 'bahnschrift';
+  src: url(/src/BAHNSCHRIFT.TTF);
+  font-weight: 400;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+}
+.latest-container{
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+  z-index: 1;
+  gap: 20px;
+}
+.nav-bar{
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  height: 50px;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+}
+.nav-links{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-left: 50px;
+}
+.nav-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.latest-wrapper{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: fixed;
+}
+.latest-wrapper::before{
+  background: linear-gradient(45deg, #000, transparent);
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.releases{
+  position: absolute;
+  width: 100%;
+  background: #1A1B1E;
+  margin-top: 100%;
+}
+.latest-details{
+  display: flex;
+  flex-direction: column;
+}
+.release-date{
+  font-weight: 500;
+  color: #9b523a;
+}
+.rating{
+  font-weight: 500;
+  color: #b75c3e;
+}
+.genre{
+  font-weight: 500;
+  position: relative;
+}
+.latest-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+.latest-btn button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.item-card{
+  width: 250px;
+  height: 370px;
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 20px;
+  gap: 20px;
+
+}
+.item-card::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.production{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  position: relative;
+  color: #b9b4b4;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.release-title{
+  margin-left: 50px;
+  position: relative;
+}
+.item-image{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  border-radius: 6px;
+}
+.item-card:hover{
+  transform: scale(1.05);
+  background: linear-gradient(0deg,#484a52 ,transparent);
+}
+.item-title{
+  z-index: 1;
+  font-size: 16px;
+}
+.item-card-title{
+  font-size: 2em;
+}
+.info{
+  position: fixed;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  align-items: center;
+  display: none;
+}
+.item-info{
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  margin-top: 50px;
+  position: relative;
+  background: #1d1e21;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+.details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  margin-top: 500px;
+  gap: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.image-info::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #1d1e21, transparent);
+}
+.image-info{
+  position: absolute;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+.description{
+  position: relative;
+  word-wrap: normal;
+  max-width: 800px;
+  letter-spacing: normal;
+}
+
+.requirements{
+  position: relative;
+  z-index: 1;
+}
+.inner-require{
+  position: relative;
+}
+.close-btn{
+  z-index: 1;
+  position: relative;
+  margin-left: 95%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: #36383e;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #282829;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-button{
+  display: none;
+}
+.screenshoots{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.inner-screenshoots{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  overflow: auto;
+
+}
+.inner-screenshoots img{
+  border-radius: 6px;
+  height: 200px;
+}
+.screenshot-img{
+  border-radius: 6px;
+}
